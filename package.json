@@ -1,0 +1,31 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React basics",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajpatel110/React.git"
+  },
+  "author": "Raj patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajpatel110/React/issues"
+  },
+  "homepage": "https://github.com/rajpatel110/React#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+
+  "browserslist":[
+    "last 2 chrome version"
+  ]
+}
