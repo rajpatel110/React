@@ -1,12 +1,44 @@
-//class based component
+import React from 'react';
+
 class UserClass extends React.Component{
-    render (){
+    constructor(props){
+        super(props);
+
+        this.state={
+            userInfo:{
+                name: "Raj patel",
+                location: "Kanpur",
+                avatar_url:"http://raj.com",
+            }
+        };
+    };
+
+    async componentDidMount(){
+        
+        //api call
+        const data= await fetch("https://api.github.com/users/rajpatel110");
+        const json= await data.json();
+
+        this.setState({
+            userInfo: json,
+        });
+
+    }
+
+    render(){
+
+        const {name, location, avatar_url} = this.state.userInfo;
+
+
         return(
             <div className="user-card">
-                <h2>User Name : Raj Patel</h2>
-                <h3>User Location: Kanpur</h3>
-                <h4>User Email: 341raj.patel@gmail.com </h4>
+                <img src={avatar_url} />
+                <h2>Name: {name}</h2>
+                <h3>Location: {location}</h3>
+                <h4>Email: 341raj.patel@gmail.com</h4>
             </div>
         );
     }
 }
+
+export default UserClass;   
