@@ -17,7 +17,7 @@ class About extends Component{
             <div>
                 <h1>About Us Page</h1>
                 <p>This is a React Project 👾👻</p>
-                <UserClass name={"First"} location={"Kanpur"}/>
+                <UserClass name={"Raj"} location={"Kanpur"}/>
             </div>
         );
     }
